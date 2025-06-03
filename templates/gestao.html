@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Atendimentos Médicos</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='gestao.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="{{ url_for('index') }}"><img class="logo-image" src="../static/imgs/logo.png" alt="logo" id="logo"></a>
+            <h1>Gestão de Atendimentos</h1>
+            <div></div>
+        </header>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="schedule-card">
+                <h3>Agendar Consulta</h3>
+                <form class="schedule-form" method="POST">
+                    <div class="psicologos">
+                        {% for psicologo in psicologos %}
+                            <input class="select_psi" name="psicologo" type="radio" style="display: none;" id="{{psicologo.nome}}" value="{{psicologo.nome}}">
+                            <label for="{{psicologo.nome}}" class="selected">
+                                <div class="doctor-card">
+                                    <div class="doctor-image">
+                                        {% if psicologo.imagem %}
+                                            <img src="{{ url_for('static', filename='/uploads'+psicologo.imagem) }}" alt="Dr. {(psicologo.nome)}">
+                                        {% endif %}
+                                    </div>
+                                    <div class="doctor-info">
+                                        <h2>Dr. {{psicologo.nome}}</h2>
+                                        <p class="specialty">Psicologia</p>
+                                        <p class="license">CRP: {{psicologo.crp}}</p>
+                                        <div class="divider"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <h4>Selecione uma data:</h4>
+                        <input type="date" name="select_date" id="date-input" class="time-option">
+                        <div class="form-group" id="horarios-container">
+                            <h4>Selecione um horário disponível:</h4>
+                        </div>
+                        <button type="submit" class="submit-btn">Confirmar Agendamento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('date-input').addEventListener('change',function(){
+            const selectedDate = this.value;
+            const selectedPsi = document.querySelector('input[name="psicologo"]:checked');
+
+            if (!selectedPsi){
+                alert("Selecione um psicologo primeiro");
+                return;
+            }
+
+            const nomePsicologo = selectedPsi.value
+            const container = document.getElementById('horarios-container');
+            container.innerHTML = '';
+
+            fetch(`/buscar_por_data?data=${selectedDate}&psicologo=${encodeURIComponent(nomePsicologo)}`)
+                .then(response => response.json())
+                .then(horarios => {
+                    if (horarios.length === 0) {
+                        container.textContent = 'Nenhum horário disponível.';
+                        return;
+                    } 
+                    horarios.forEach(horario => {
+                        const label = document.createElement('label');
+                        label.className = 'time-option';
+
+                        const input = document.createElement('input');
+                        input.type='radio';
+                        input.name='horario';
+                        input.value= horario;
+
+                        const custom = document.createElement('span');
+                        custom.className='radio-custom';
+
+                        const slot = document.createElement('span');
+                        slot.className='time-slot'
+                        slot.textContent=horario;
+
+                        label.appendChild(input);
+                        label.appendChild(custom);
+                        label.appendChild(slot);
+
+                        container.appendChild(label);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro na busca',Error);
+                });
+        });
+    </script>
+</body>
+</html>

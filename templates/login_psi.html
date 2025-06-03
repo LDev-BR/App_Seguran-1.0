@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MindConnect</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='Login.css') }}">
+
+  <!-- VLibras -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</head>
+<body>
+  <!-- Container do VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="faixa-verde"></div>
+
+  <div class="container">
+    <div class="login-box">
+      <div class="logo">
+        <a href="{{ url_for('index') }}"><img src="../static/imgs/logo2.png" alt="Logo MindConnect" /></a>
+        <h1>MINDCONNECT</h1>
+        <span>Login</span>
+      </div>
+
+      <form method="POST">
+        <input name="login" type="text" placeholder="Login" class="input" aria-label="Digite seu login">
+        <input name="senha" type="password" placeholder="Senha" class="input" aria-label="Digite sua senha">
+        <button type="submit" class="btn-entrar">Entrar</button>
+        <a href="{{ url_for('cadastro') }}" class="cadastre">Cadastre-se</a>
+        <a href="{{ url_for('password') }}" class="esqueceu">Esqueceu a senha?</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

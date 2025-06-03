@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: #d1d1d1;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center; 
+    align-items: center;     
+}
+
+#accessibility{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 80.4px;
+    height: 67px;
+    cursor: pointer;
+}
+
+#green{
+    background-color: #008000;
+    position: absolute;
+    width: 100%; 
+    height: 40px;
+    top: 0px;
+}
+
+#white {
+    width: 1000px;
+    height: 600px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#user{
+    width: 60px;
+    height: 59px;
+    position: absolute;
+    top: 250px;
+    left: 590px;
+}
+
+#helmet{
+    width: 66px;
+    height: 77px;
+    position: absolute;
+    top: 70px;
+    left: 45% ;
+    cursor: pointer;
+}
+
+#mindconnect{
+    color: #008000;
+    position: absolute;
+    left: 49%;
+    top: 87px;
+    font-size: 36px;
+}
+
+.helmet_and_mindconnect{
+     left: -100px;
+     position: relative;
+}
+
+#recover{
+    color: #FFA63D; 
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 265px;
+    left: 840px;
+}
+
+#bege{
+    background-color: #b8b8b8;
+    width: 380px;
+    height: 39px;
+    position: absolute;
+    border-radius: 10px;
+    top: 39%;
+    left: 40%;
+}
+
+
+#bege2{
+    background-color: #b8b8b8;
+    width: 380px;
+    height: 39px;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 40%;
+}
+
+.requisitos{
+    position: absolute;
+}
+
+#password{
+    all: unset;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 366px;
+    margin-left: 810px;
+    width: 330px;
+  
+}
+
+input::placeholder {
+    color: grey;
+    font-size: 18px;
+  }
+  
+#enviar{
+    background-color: orange;
+    border: none;
+    width: 174px;
+    height: 40px;
+    color: green;
+    font-size: 20px;
+    border-radius: 9%;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 570px;
+    margin-left: 870px;
+}
+
+#enviar:hover {
+    transition: all 0.3s ease-out;
+    background-color: #007f14;
+    color: #ff962c;
+    cursor: pointer;     
+}
+
+#passwordicon{
+    position: absolute;
+    margin-top: 359px;
+    margin-left: 773px;
+    height: 29px;
+}
+
+#password2{
+    all: unset;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 468px;
+    margin-left: 810px;
+    width: 330px;
+}
+
+#passwordicon2{
+    position: absolute;
+    margin-top: 460px;
+    margin-left: 777px;
+    height: 29px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='trilha.css') }}">
+    <link rel="stylesheet" href="../static/trilha.css">
+    <title>Trilha do bem estar</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <hr class="verde grosso">
+    <header>
+        <nav class="nav">
+            <div>
+                <img src="../static/imgs/logo2.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <section>
+                    <ul class="nav">
+                        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                        <li><a href="#">Recomendações</a></li>
+                        <li><a href="#">Dicas de Relaxamento</a></li>
+                        <li><a href="#">Agendar consulta</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div>
+                <a href=""><img src="../static/imgs/usuário.png" alt="usuario" class="perfil"></a>
+            </div>
+        </nav>
+        <div class="titulo">
+            <h1>Trilha do bem estar</h1>
+        </div>
+        <hr class="verde">
+    </header>
+    <!--Corpo-->
+    <main>
+        <form method="POST">
+            <section>
+                <legend>1° Você está se sentindo bem hoje ?</legend>
+                <div class="opcao">
+                    <input type="radio" required value="0" class="sim" name="hoje" id="hoje_sim"> <label for="hoje_sim">SIM</label>
+                    <input type="radio" required value="-1" class="nao" name="hoje" id="hoje_nao"> <label for="hoje_nao">NÃO</label>
+                </div>
+            </section>
+            <section>
+                <legend>2° Nos últimos dias, você tem sentido estresse, ansiedade ou cansaço excessivo? </legend>
+                <div class="opcao">
+                    <input type="radio" required value="-1" class="sim" name="sentido" id="sentido_sim"> <label for="sentido_sim">SIM</label>
+                    <input type="radio" required value="0" class="nao" name="sentido" id="sentido_nao" class="nao"> <label for="sentido_nao">NÃO</label>
+                </div>
+            </section>
+            <section>
+                <legend>3° Você sabe o que está causando esses sentimentos ?</legend>
+                <div class="opcao">
+                    <input type="radio" required value="0" class="sim" name="causa" id="sentimento_sim"> <label for="sentimento_sim">SIM</label>
+                    <input type="radio" required value="-1" class="nao" name="causa" id="sentimento_nao"> <label for="sentimento_nao">NÃO</label>
+                </div>
+            </section>
+            <section>
+                <legend>4° Você sente que precisa conversar com um profissional sobre isso ?</legend>
+                <div class="opcao">
+                    <input type="radio" required value="-1" class="sim" name="conversar" id="conversa_sim"> <label for="conversa_sim">SIM</label>
+                    <input type="radio" required value="0" class="nao" name="conversar" id="conversa_nao"> <label for="conversa_nao">NÃO</label>
+                </div>
+            </section>
+            <section>
+                <legend>5° Você faz alguma atividade para para aliviar o estresse ? <br> (exercício, meditação ou hobbies)</legend>
+                <div class="opcao">
+                    <input type="radio" required value="0" class="sim" name="relaxar" id="relaxa_sim"> <label for="relaxa_sim">SIM</label>
+                    <input type="radio" required value="-1" class="nao" name="relaxar" id="relaxa_nao"> <label for="relaxa_nao">NÃO</label>
+                </div>
+            </section>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>

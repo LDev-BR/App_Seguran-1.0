@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Atendimentos Médicos</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='gestao.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <h1>Gestão de Atendimentos</h1>
+                <div class="logo-image">
+                    <img src="../static/imgs/logo.png" alt="logo" id="logo">
+                </div>
+        </header>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="appointment-section">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="../static/imgs/img_exemplar.jpg" alt="Dr. Fulano da Silva">
+                    </div>
+                    <div class="doctor-info">
+                        <h2>Dr. Fulano da Silva</h2>
+                        <p class="specialty">Psicologia</p>
+                        <p class="license">CRM: 12345/SP</p>
+                        <div class="divider"></div>
+                        <p class="bio">Apaixonado por ajudar pessoas a se reconectarem consigo mesmas e melhorarem a eficiência no trabalho através do autoconhecimento e desenvolvimento pessoal.</p>
+                    </div>
+                </div>
+                <div class="schedule-card">
+                    <h3>Agendar Consulta</h3>
+                    <form class="schedule-form">
+                        <div class="form-group">
+                            <h4>Selecione um horário disponível:</h4>
+                            <div class="time-options">
+                                <label class="time-option">
+                                    <input type="radio" name="horario">
+                                    <span class="radio-custom"></span>
+                                    <span class="time-slot">08:30 - 09:30</span>
+                                </label>
+                                <label class="time-option">
+                                    <input type="radio" name="horario" checked>
+                                    <span class="radio-custom"></span>
+                                    <span class="time-slot">10:30 - 11:30</span>
+                                </label>
+                                <label class="time-option">
+                                    <input type="radio" name="horario">
+                                    <span class="radio-custom"></span>
+                                    <span class="time-slot">13:00 - 14:00</span>
+                                </label>
+                                <label class="time-option">
+                                    <input type="radio" name="horario">
+                                    <span class="radio-custom"></span>
+                                    <span class="time-slot">14:30 - 15:30</span>
+                                </label>
+                                <label class="time-option">
+                                    <input type="radio" name="horario">
+                                    <span class="radio-custom"></span>
+                                    <span class="time-slot">16:30 - 17:30</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Confirmar Agendamento</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

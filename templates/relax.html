@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='dicas_relaxamento.css') }}">
+    <link rel="icon" href="logo.png" type="img/png">
+    <title>Dicas de Relaxamento</title>
+</head>
+<body>
+    <header>
+        <div class="dicas">
+            <a href="{{ url_for('index') }}"><img src="../static/imgs/logo2.png" id="logo" alt="logo"></a>
+            <h2>Dicas de Relaxamento</h2>
+            <div></div>
+        </div>
+
+        <div id="reta"></div>
+
+    </header>
+
+    <main class="container">
+
+        <div class="imagem">
+            <img src="../static/imgs/imagem_dicas.png" id="imagem_dicas" alt="imagem_dicas">
+        </div>
+
+        <div class="banner">
+            <p>Consulta com Psicólogo Online: 1.2 "Agende uma consulta com um profissional para discutir suas preocupações. <a href="{{ url_for('agendar') }}" id="clique_aqui">Clique aqui para ver as opções disponíveis.</a></p>
+            <p>Exercícios de Respiração: 2.2 "Experimente a técnica 4-7-8: inspire pelo nariz por 4 segundos, segure a respiração por 7 segundos e expire pela boca por 8 segundos. Repita 5 vezes."</p>
+            <p>Meditação Guiada: 3.2 "Experimente meditações guiadas disponíveis em aplicativos como (Calm) ou (Headspace)."</p>
+            <p>Atividades Físicas: 4.2 "Dedique pelo menos 30 minutos por dia a uma atividade física que você goste, como caminhada, corrida ou dança."</p>
+            <p>Diário de Emoções: 5.2 "Mantenha um diário onde você possa registrar seus sentimentos diariamente. Isso pode ajudar a identificar gatilhos."</p>
+            <p>Técnicas de Relaxamento: 6.2 "Experimente técnicas de relaxamento, como alongamentos, yoga ou banhos quentes."</p>
+            <p>Conexão Social: 7.2 "Converse com amigos ou familiares sobre como você se sente. O apoio social é fundamental."</p>
+            <p>Limitação do Uso de Tecnologia: 8.2 "Estabeleça horários para desconectar das redes sociais e do trabalho. Isso pode ajudar na recuperação mental."</p>
+            <P>Alimentação Saudável: 9.2 "Inclua alimentos ricos em ômega 3 e antioxidantes na sua dieta, como peixes e frutas, para ajudar a melhorar o humor."</P>
+            <p>Hobbies Relaxantes: 10.2 "Dedique tempo a hobbies que você gosta, como leitura, arte ou jardinagem, para ajudar a aliviar o estresse."</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

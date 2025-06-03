@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='trilha2.css') }}">
+    <title>Trilha do bem estar</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <hr class="verde grosso">
+    <header>
+        <nav class="nav">
+            <div>
+                <img src="../static/imgs/logo2.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <section>
+                    <ul class="nav">
+                        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                        <li><a href="#">Recomendações</a></li>
+                        <li><a href="#">Dicas de Relaxamento</a></li>
+                        <li><a href="#">Agendar consulta</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div>
+                <a href=""><img src="../static/imgs/usuário.png" alt="usuario" class="perfil"></a>
+            </div>
+        </nav>
+        <div class="titulo">
+            <h1>Trilha do bem estar</h1>
+        </div>
+        <hr class="verde">
+    </header>
+    <!--Corpo-->
+    <main class="container">
+        <div class="resultado">
+            <div class="resultado_branco">
+            <h1>Resultado do questionário</h1><br>
+            {% for item in resultado %}
+                <h2 class="{{ resultado_classe }}">{{ item }}</h2><br><br>
+            {% endfor %}
+            <ul>
+            {% for r in recomendacoes %}
+                <li><h3>{{ r }}</h3></li><br><br><br>
+            {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

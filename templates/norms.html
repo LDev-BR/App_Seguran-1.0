@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Normas e Regulamentos - Mindconnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='Normas_e_Regulamentos.css') }}">
+</head>
+
+<body>
+  <div class="faixa-topo"></div>
+
+  <header>
+    <div class="logo">
+      <img src="../static/imgs/logo2.png" alt="Logo Mindconnect" />
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Início</a></li>
+        <li><a href="">Recomendações</a></li>
+        <li><a href="">Dicas de Relaxamento</a></li>
+        <li><a href="">Agendar consulta</a></li>
+      </ul>
+    </nav>
+    <div class="acoes-header">
+      <button class="btn-destaque">Trilha do Bem Estar</button>
+      <a href="" class="login-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+  <main class="regulamento-container">
+    <h1>Normas e Regulamentos</h1>
+
+    <h2>1. Uso Seguro do Ambiente de Trabalho</h2>
+    <p>Todos os colaboradores devem utilizar Equipamentos de Proteção Individual (EPIs) fornecidos pela empresa conforme a função desempenhada.</p>
+
+    <h2>2. Sinalização de Segurança</h2>
+    <p>É obrigatório respeitar todas as sinalizações visuais presentes no ambiente, como placas de aviso, emergência e restrição.</p>
+
+    <h2>3. Treinamentos Obrigatórios</h2>
+    <p>Participar de treinamentos periódicos sobre segurança do trabalho é essencial para garantir a prevenção de acidentes.</p>
+
+    <h2>4. Procedimentos em Caso de Acidente</h2>
+    <p>Em caso de acidente, deve-se comunicar imediatamente o supervisor e seguir os procedimentos de primeiros socorros e atendimento.</p>
+
+    <h2>5. Conduta no Ambiente de Trabalho</h2>
+    <p>Evite brincadeiras, corridas e distrações que possam colocar em risco a segurança própria ou de colegas.</p>
+
+    <h2>6. Manutenção de Equipamentos</h2>
+    <p>Não opere máquinas ou ferramentas defeituosas. Reporte imediatamente qualquer anormalidade ao setor responsável.</p>
+
+    <h2>7. Armazenamento e Organização</h2>
+    <p>Mantenha os materiais organizados e os locais de passagem desobstruídos para evitar quedas ou outros acidentes.</p>
+
+    <h2>8. Sigilo e Ética Profissional</h2>
+    <p>É importante manter o sigilo sobre informações sensíveis e adotar uma postura ética e respeitosa com todos os envolvidos.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mindconnect. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- VLibras Plugin -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

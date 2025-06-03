@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F4FFF4;
+}
+
+header h2{
+    color: #008000;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#reta{
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 3px;
+}
+
+.dicas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+#logo{
+    width: 50px;
+    height: 63px;
+}
+
+#imagem_dicas{
+    width: 820px;
+    height: 820px;
+}
+
+.banner{
+    background-color: #008000;
+    width: 900px;
+    height: 786px;
+    overflow-y: auto;
+    padding-right: 12px;
+    border-radius: 18px;
+    scrollbar-color: white green;
+    box-shadow: 0px 4px 20px rgba(3, 18, 33, 0.6);
+}
+
+.banner p{
+    background-color: transparent;
+    font-size: 17px;
+    margin-bottom: 53px;
+    margin-left: 10px;
+    margin-top: 50px;
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#clique_aqui{
+    background-color: transparent;
+    font-size: 17px;
+    margin-top: 50px;
+    color: #FFA63D;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    margin: 1%;
+}

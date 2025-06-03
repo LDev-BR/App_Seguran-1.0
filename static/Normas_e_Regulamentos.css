@@ -1,0 +1,246 @@
+:root {
+  --verde-principal: #006400;
+  --laranja-destaque: #FFA500;
+  --branco: white;
+  --cinza-claro: #d1d1d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cinza-claro);
+}
+
+/* Barra verde no topo */
+.faixa-topo {
+  height: 15px;
+  background-color: var(--verde-principal);
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--branco);
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--verde-principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--laranja-destaque);
+}
+
+.acoes-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-destaque {
+  background: var(--laranja-destaque);
+  color: var(--verde-principal);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-destaque:hover {
+  background: #e69500;
+}
+
+.login-icon {
+  font-size: 28px;
+  color: var(--verde-principal);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--verde-principal);
+}
+
+/* Conteúdo principal (ex: formulário de denúncias ou normas) */
+.conteudo-principal {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.box-form {
+  background-color: var(--branco);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.box-form h1 {
+  font-size: 26px;
+  color: var(--verde-principal);
+  margin-bottom: 10px;
+}
+
+.box-form p {
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #333;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario label {
+  text-align: left;
+  font-weight: bold;
+  color: var(--verde-principal);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  outline: none;
+  border-color: var(--verde-principal);
+}
+
+.formulario button {
+  background-color: var(--laranja-destaque);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #e69500;
+}
+
+/* Página de Normas e Regulamentos */
+.regulamento-container {
+  max-width: 1000px;
+  margin: 100px auto 40px;
+  background: var(--branco);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.regulamento-container h1 {
+  color: var(--verde-principal);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.regulamento-container h2 {
+  color: var(--verde-principal);
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.regulamento-container p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Rodapé */
+footer {
+  background: var(--verde-principal);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--branco);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .acoes-header {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .box-form {
+    padding: 30px 20px;
+  }
+
+  .regulamento-container {
+    padding: 30px 20px;
+    margin: 60px 10px;
+  }
+}

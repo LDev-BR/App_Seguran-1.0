@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='prontuario.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="pp-removebg-preview 3.png" type="img/png">
+    <link rel="stylesheet" href="../static/prontuario.css">
+    <title>Prontuario</title>
+</head>
+<body>  
+    <img id="accessibility" src="../static/imgs/acessibilidade.png" alt="simbolo de acessibilidade">
+    <div id="green"></div>
+    <div id="white">
+        <p id="fotoperfil">Foto de Perfil</p>
+        <p id="nomepaciente">Nome do Paciente</p>
+    </div>
+    <img id="user" src="../static/imgs/User2.png" alt="">
+    <div class="helmet_and_mindconnect">
+        <img id="helmet" src="../static/imgs/logo2.png" alt="">
+        <h1 id="mindconnect">MINDCONNECT</h1>
+    </div>
+    <h2 id="recover">Prontuário</h2>
+    <div id="area_anotacoes"></div>
+    <form class="requisitos">   
+        <textarea id="prontuario" placeholder="Insira anotação" required></textarea>
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+
+</body> 
+</html>

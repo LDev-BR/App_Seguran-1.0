@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cadastrar.css') }}">
+    <link rel="icon" href="../static/imgs/logo.png" type="img/png">
+    <title>MINDCONNECT - Cadastro</title>
+</head>
+<body>
+        <header>
+            <div></div>
+        </header>
+    
+        <div class="banners">
+        <main class="container">
+            <div class="banner1">
+                <img src="../static/imgs/logo.png" alt="logo" id="logo">
+                <h1>MINDCONNECT</h1>
+                <p>Cadastre-se</p>
+                <form method="POST" class="requisitos">
+                    <img src="../static/imgs/usuário.png" id="usuario_icone" alt="usuario_icone">
+                    <img src="../static/imgs/celular.png" id="celular_icone" alt="celular_icone">
+                    <img src="../static/imgs/e-mail.png" id="email_icone" alt="email_icone">
+                    <img src="../static/imgs/cadeado.png" id="cadeado_icone" alt="cadeado_icone">
+                    <input type="text" id="nome" placeholder="Nome" name="nome" required>
+                    <input type="text" id="crp" placeholder="CRP" name="crp" required>
+                    <input type="email" id="email" placeholder="E-mail" name="email" required>
+                    <input type="password" id="senha" placeholder="Criar senha" name="senha" required>
+                    <input type="checkbox" name="politicas" required/><label id="politicas" for="politicas">Eu concordo com os <a href="{{ url_for('termos') }}" target="none">termos de uso</a> e entendo que minhas informações serão mantidas em sigilo total.</label>
+                    <div>
+                        <img src="" alt="relogio">
+                        <label for="inicio">Horario inicial de atendimento</label>
+                        <input type="time" name="inicio" id="inicio" required>
+                        <label for="final">Horario final de atendimento</label>
+                        <input type="time" name="final" id="final" required>
+                        <label for="intervalo">Intervalo de tempo entre atendimentos</label>
+                        <select name="intervalo" id="intervalo">
+                            <option disabled>Selecione</option>
+                            <option value="30">30 minutos</option>
+                            <option value="60">60 minutos</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="entrar" class="entrar">Cadastrar</button>
+                </form>
+
+                <a href="{{ url_for('index') }}"><img src="../static/imgs/seta.png" id="seta_icone" alt="seta_icone"></a>
+            </div>
+
+            <div class="banner2">
+                <h1>Bem Vindo!</h1>
+                <img src="../static/imgs/seguranca-trab 1.png" id="seguranca" alt="seguranca">
+            </div>
+            
+        </main>
+        </div>
+</body>
+</html>

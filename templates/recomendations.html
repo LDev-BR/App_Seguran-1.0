@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='recomendacao.css') }}">
+    <link rel="icon" href="../static/imgs/logo2.png" type="img/png">
+    <title>Área de Recomendação Psicológica</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="verde"></div>
+            <nav>
+                <a href="{{ url_for('index') }}"><img src="../static/imgs/logo2.png" alt="logo" id="logo"></a>
+                <h2>Área de Recomendação Psicológica</h2>
+                <a href="#"><img src="../static/imgs/usuário.png" alt="perfil" id="perfil"></a>
+            </nav>
+            <div id="reta"></div>
+        </header>
+        <div class="cards">
+            <div class="card">
+                <img src="../static/imgs/calendario.png" alt="calendario" id="calendario">
+                <h1 id="calendario_text">Planeje o dia</h1>
+            </div>
+            <div class="card">
+                <img src="../static/imgs/meditar.png" alt="meditar" id="meditar">
+                <h1 id="meditar_text">Medite sempre que possivel</h1>
+            </div>
+            <div class="card">
+                <img src="../static/imgs/tabela.png" alt="tabela" id="tabela">
+                <h1 id="tabela_text">Cumpra tarefas antes que se acumulem</h1>
+            </div>
+            <div class="card">
+                <img src="../static/imgs/cesta.png" alt="cesta" id="cesta">
+                <h1 id="cesta_text">Tenha uma alimentação saudável</h1>
+            </div>
+            <div class="card">
+                <img src="../static/imgs/baforada.png" alt="baforada" id="baforada">
+                <h1 id="baforada_text">Veja exercícios de respiração</h1>
+            </div>
+            <div class="card">
+                <img src="../static/imgs/anilha.png" alt="anilha" id="anilha">
+                <h1 id="anilha_text">Faça atividades fisicas</h1>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

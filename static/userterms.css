@@ -1,0 +1,48 @@
+*{
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: #f4f4f4;
+}
+header{
+    text-align: center;
+}
+.termos{
+    background-color: rgb(226, 226, 226);
+    width: 1000px;
+    padding: 30px;
+    text-align: justify;
+    display: block;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgb(97, 97, 97);
+}
+#check{
+    margin-left: 25px;
+}
+#intr{
+    font-weight: bold;
+}
+#butao{
+    margin-left: 24px;
+    margin-right: 5px;
+}
+button{
+    margin-top: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgb(97, 97, 97);
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(170, 169, 169);
+}
+button:active{
+    transform: scale(0.95);
+}

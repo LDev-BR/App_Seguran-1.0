@@ -1,0 +1,125 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial,sans-serif;
+}
+
+body{
+    background-color: #F4FFF4;
+}
+
+.verde{
+    background-color: #008000;
+    height: 1px;
+}
+
+.grosso{
+    height: 20px;
+}
+
+header{
+    margin-top: 30px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+li:hover{
+    transform: scale(1.1);
+}
+
+li a{
+    text-decoration: none;
+    color: #008000;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+ul{
+    gap: 50px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.perfil{
+    width: 50px;
+    height: 50px;
+}
+
+.titulo{
+    text-align: center;
+    display: flex;
+    width: max-content;
+    padding: 10px;
+    margin-top: 40px;
+    color: #064F06;
+}
+
+main{
+    padding: 20px;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+}
+
+form section{
+    margin-top: 20px;
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+label{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+    transition: .5s;
+    width: 55%;
+    text-align: center;
+    margin-left: 30px;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+label:hover{
+    transform: scale(1.1);
+}
+
+.sim:checked + label{
+    background-color: rgb(42, 184, 42);
+    font-weight: bold;
+}
+
+.nao:checked + label{
+    background-color: red;
+    font-weight: bold;
+}
+
+form button{
+    width: 100px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+form button:hover{
+    transform: scale(1.2);
+    background-color: rgb(42, 184, 42);
+}

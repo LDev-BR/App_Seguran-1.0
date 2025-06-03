@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Denúncias e Sugestões | Mindconnect</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='Denuncias.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Barra verde -->
+  <div class="faixa-topo"></div>
+
+  <!-- Cabeçalho -->
+  <header class="topo">
+    <div class="logo">
+      <img src="../static/imgs/logo.png" alt="Logo Mindconnect">
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Início</a></li>
+        <li><a href="">Recomendações</a></li>
+        <li><a href="">Dicas de Relaxamento</a></li>
+        <li><a href="">Agendar Consulta</a></li>
+      </ul>
+    </nav>
+    <div class="acoes-header">
+      <button class="btn-destaque">Trilha do Bem Estar</button>
+      <a href="" class="login-icon"><i class="fas fa-user-circle"></i></a>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="conteudo-principal">
+    <div class="box-form">
+      <h1><i class="fas fa-bullhorn"></i> Denúncias e Sugestões</h1>
+      <p>Ajude-nos a melhorar! Envie uma sugestão ou relate algo importante.</p>
+
+      <form class="formulario" action="#" method="POST">
+        <label for="tipo">Tipo de mensagem</label>
+        <select id="tipo" name="tipo" required>
+          <option disabled>Selecione</option>
+          <option value="denuncia">Denúncia</option>
+          <option value="sugestao">Sugestão</option>
+        </select>
+
+        <label for="nome">Nome (opcional)</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva aqui sua denúncia ou sugestão" required></textarea>
+
+        <button type="submit" class="btn-destaque">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2025 Mindconnect. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

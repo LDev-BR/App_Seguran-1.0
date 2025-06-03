@@ -1,0 +1,292 @@
+/* Variáveis de cores para fácil manutenção */
+:root {
+  --verde-principal: #006400; /* Cor principal */
+  --laranja-destaque: #FFA500; /* Cor de destaque */
+  --branco: white; /* Cor de fundo */
+  --cinza-claro: #d1d1d1; /* Cor de fundo clara */
+}
+
+/* Resetando margin, padding e box-sizing para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do body com fundo claro */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cinza-claro);
+}
+
+/* Faixa superior com cor verde */
+.faixa-topo {
+  height: 15px;
+  background-color: var(--verde-principal);
+}
+
+/* Estilos para o header com navegação e botões */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--branco);
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Estilo da logo */
+.logo img {
+  height: 100px;
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--verde-principal);
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: .5s;
+}
+
+/* Efeito de hover no menu */
+nav ul li a:hover {
+  color: var(--laranja-destaque);
+}
+
+nav ul li{
+  transition-duration: .5s;
+}
+
+nav ul li:hover{
+  transform: scale(1.1);
+}
+
+/* Estilos para ações do header */
+.acoes-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botão de destaque com fundo laranja */
+.btn-destaque {
+  background: var(--laranja-destaque);
+  color: var(--verde-principal);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Efeito de hover no botão */
+.btn-destaque:hover {
+  background: #e69500;
+}
+
+/* Ícone de login */
+.login-icon {
+  font-size: 28px;
+  color: var(--verde-principal);
+}
+
+/* Estilo do menu toggle (responsivo) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--verde-principal);
+}
+
+/* Estilos do slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.1s ease;
+}
+
+/* Estilos para cada slide */
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Controle de pontos para navegação no slider */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Quando o ponto está ativo */
+.dot.active {
+  background: #fff;
+}
+
+/* Estilos para os serviços com boxes */
+main {
+  padding: 250px 40px;
+  text-align: center;
+}
+
+.servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  background: var(--verde-principal);
+  color: white;
+  border-radius: 20px;
+  padding: 100px 50px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+/* Efeito de hover nos boxes */
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo do título e ícone nos boxes */
+.titulo-box {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.icone-box {
+  color: var(--laranja-destaque);
+  margin-bottom: 10px;
+}
+
+/* Link no box (sem decoração) */
+.box-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos do rodapé */
+footer {
+  background: var(--verde-principal);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsividade: ajustes para telas pequenas */
+@media (max-width: 768px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background: var(--branco);
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .acoes-header {
+      margin-top: 10px;
+      width: 100%;
+      justify-content: flex-end;
+  }
+
+  .slider {
+      height: 250px;
+  }
+
+  .box {
+      width: 90%;
+      padding: 30px 10px;
+  }
+}
+
+
+.menu-login {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  right: 10px;
+  top: 50px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-login button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-login button:hover {
+  background-color: #f0f0f0;
+}
+
+.aba {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #f5ebeb;
+}
+
+.aba.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
