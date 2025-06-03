@@ -111,18 +111,6 @@ body{
     position: absolute;
 }
 
-#password{
-    all: unset;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    justify-content: center;  
-    align-items: center;      
-    margin-top: 366px;
-    margin-left: 810px;
-    width: 330px;
-  
-}
-
 input::placeholder {
     color: grey;
     font-size: 18px;
@@ -137,9 +125,7 @@ input::placeholder {
     font-size: 20px;
     border-radius: 9%;
     cursor: pointer;
-    position: absolute;
-    margin-top: 570px;
-    margin-left: 870px;
+    transform: translate(10vw, 60vh);
 }
 
 #enviar:hover {
@@ -150,26 +136,29 @@ input::placeholder {
 }
 
 #passwordicon{
-    position: absolute;
-    margin-top: 359px;
-    margin-left: 773px;
     height: 29px;
+    transform: translate(40.3vw, 39.7vh);
 }
 
 #password2{
     all: unset;
     color: rgb(0, 0, 0);
-    position: absolute;
     justify-content: center;  
     align-items: center;      
-    margin-top: 468px;
-    margin-left: 810px;
     width: 330px;
+    transform: translate(24.7vw, 50vh);
 }
 
 #passwordicon2{
-    position: absolute;
-    margin-top: 460px;
-    margin-left: 777px;
     height: 29px;
+    transform: translate(38.7vw, 50.5vh);
+}
+
+#codigo{    
+    all: unset;
+    color: rgb(0, 0, 0);
+    justify-content: center;  
+    align-items: center;      
+    width: 330px;
+    transform: translate(42vw, 39vh);
 }
